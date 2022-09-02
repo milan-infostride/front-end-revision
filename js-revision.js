@@ -128,10 +128,91 @@
 
 //react---
 //react v17 vs vs 18
+    // before
+        // getElementById
+        // render
+    // after
+        // getrootbyid
+        // createRoot
+        // root.render 
+    // advantage 
+        // automated batching
+            //before
+                //every state update --- rerender
+            //now
+                //2 state updates are batched --- then re render
 //class components
     //life cycle methods
+        // https://www.w3schools.com/react/react_lifecycle.asp
+        // Mounting
+            // 1. constructor(props)
+            // 2. getDerivedStateFromProps(props,state)
+            // 3. render()
+            // 4. componentDidMount()
+        // Updating
+            // 1. getDerivedStateFromProps(props,state)
+            // 2. shouldComponentUpdate()
+            // 3. render()
+            // 4. getSnapshotBeforeUpdate(prevProp, prevState)
+            // 5. componentDidMount()
+        // Unmount
+            // 1. componentWillUnmunt()
+            // useEffect for componentWillUnmount()
+                // useEffect(()=>{
+                //     // code 
+                //     return ()=>{
+                //         //clean up code
+                //     }
+                // },[])
 //--hooks(all basic)
+    // useState
+        // const [stateVar,setStateVar]  = useState(initialState);
+    // useEffect
+        // useEffect(()=>{
+        // componentDidmount 
+        // },[])
+
+
+        // useEffect(()=>{
+            // once
+        // for any update 
+        // })
+
+        // useEffect(()=>{
+        // once on render
+        // state change 
+        // },[state])
+        
+        // const func = (cb)=>{
+        //     //code
+        //     cb()
+        // }
+
+
+    // useReducer
+        //  let action = {
+        //     type: 'plusOne',
+        //     payLoad: {
+        //         value: 2
+        //     }
+        // }
+        // const reducerFn = (prevState,action)=>{
+        //     if(action.type=='plusOne'){
+        //         //
+        //         // must return new state
+        //     }
+        //     if(action.type=='lktkltg'){
+        //         //
+        //     }
+
+        // }
+        // const [stateVar,stateVarDipatch] = useReducer(reducerFn,initialState)
+        // stateVarDispatch(action)
+    // useContext 
+
     //useMemo--implementation
+
+
     //useCallback--implementation
     //useEffect -- component did mount
 //--router --hooks
@@ -144,6 +225,15 @@
     //how basic redux work
     //evrything revise
     //middleware and thunk
+        //thunk 
+            // const sendData= (data)=>{
+            //     return async (dispatch)=>{
+            //         //await asyncronous code
+            //         dispatch(action)
+            //     }
+            // }
+        // app.js
+            // dispatch(sendData(data))
 
 // higher-order-components
     //--implement
